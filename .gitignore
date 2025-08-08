@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Sensitive files  
+*.json
+docai-medical-parser-key.json
+makecom-key.json
+
+# Test outputs
+test_results.json
+local_test_results.json
+
+# PDFs
+*.pdf
+
+# Debug
+debug/
+archive/

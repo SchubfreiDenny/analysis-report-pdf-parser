@@ -1,0 +1,5 @@
+# Streamlined requirements for Medical PDF Parser
+Flask>=3.0.0,<4.0.0
+gunicorn>=21.0.0
+google-cloud-documentai>=2.24.0
+google-cloud-logging>=3.8.0

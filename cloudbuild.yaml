@@ -1,0 +1,33 @@
+steps:
+  # Run unit tests
+  - name: 'python:3.11'
+    entrypoint: 'python'
+    args: ['-m', 'pytest', 'tests/']
+    id: 'run-tests'
+    
+  # Deploy to Cloud Functions
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    args:
+      - gcloud
+      - functions
+      - deploy
+      - medical-pdf-parser
+      - --gen2
+      - --runtime=python311
+      - --region=us-central1
+      - --source=.
+      - --entry-point=medical_pdf_parser
+      - --trigger-http
+      - --allow-unauthenticated
+      - --memory=512MB
+      - --timeout=540s
+      - --max-instances=100
+      - --min-instances=0
+      - --env-vars-file=.env.yaml
+      - --retry-on-failure
+    id: 'deploy-function'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+  
+timeout: '1200s'
