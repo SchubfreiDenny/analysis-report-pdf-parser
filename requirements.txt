@@ -1,6 +1,7 @@
-google-cloud-documentai==2.30.0
-functions-framework==3.6.0
-google-cloud-logging==3.10.0
-google-api-core==2.17.0
-google-auth==2.27.0
-protobuf==4.25.0
+# Requirements for Cloud Run Medical PDF Parser
+Flask>=3.0.0,<4.0.0
+gunicorn>=21.0.0
+google-cloud-documentai>=2.30.0
+google-cloud-logging>=3.10.0
+google-api-core>=2.17.0
+google-auth>=2.27.0
