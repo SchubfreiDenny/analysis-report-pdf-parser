@@ -21,7 +21,7 @@ app = Flask(__name__)
 # Configuration for trained processor
 PROCESSOR_CONFIG = {
     "project_id": "naehrstoff-masterplan",
-    "processor_id": "7d33797caa970d86",  # analysis-pdf-extractor-rowbased (new trained processor)
+    "processor_id": "5934d568f6651c45",  # Neuer trainierter Processor (wird deployed)
     "location": "us"
 }
 
